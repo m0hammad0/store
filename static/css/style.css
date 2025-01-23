@@ -185,23 +185,48 @@ a {
 
 .product-span3 {
     font-family: 'font1';
-    color: #e10000;
+    color: #505050;
     background: #f7f7f7;
     border: 1px solid #606060;
     padding: 0 6px;
     border-radius: 15px;
 }
 
+.footer-start {
+    background-color: #e3e3e3;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.footer-start-span1 {
+    font-family: 'font1';
+    font-size: 40px;
+}
 
+.footer-start-span2 {
+    font-family: 'font1';
+    font-size: 20px;
+    color: #878787;
+}
 
+.footer-start-span3, .footer-start-span4 {
+    font-family: 'font1';
+    font-size: 16px;
+    color: #878787;
+}
+
+.footer-start-span5 {
+    font-family: 'font1';
+    color: #878787;
+}
 
 .footer {
-    height: 150px;
+    height: 50px;
     background: #2e4150;
     direction: rtl;
     display: flex;
-    align-items: end;
     justify-content: center;
 }
 
@@ -209,5 +234,5 @@ a {
     font-family: font1;
     font-size: 10px;
     color: #bfc5cb;
-    margin-bottom: 50px;
+    margin: 15px;
 }
