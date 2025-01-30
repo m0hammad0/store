@@ -24,13 +24,6 @@ header {
     margin: 25px 20px;
 }
 
-.menu-container {
-    margin-top: 8px;
-    transform: translateX(-50%);
-    overflow: hidden;
-    float: left;
-}
-
 .button {
     background-color: #ffffff;
     margin: 15px 0 0 75px;
@@ -44,26 +37,52 @@ header {
     transition: width 0.4s;
 }
 
-.menu-container.active {
+.menu-container, .menu-containerr {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    /*transform: translateX(-50%);
+    overflow: hidden;
+    float: left;*/
+}
+
+.gostore {
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    padding: 10px;
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #007eff;
+    transition: width 0.4s;
+}
+
+.gostore-span {
+    font-family: 'font1';
+    color: #f7f7f7;
+    font-size: 15px;
+}
+
+.menu-container.active, .menu-containerr.active {
     overflow: visible;
 }
 
-.menu-container.active .button {
+.menu-container.active .button, .menu-containerr.active .button {
     width: 1%;
 
 }
 
-.menu-container.active .fas::before {
+.menu-container.active .fas::before, .menu-containerr.active .fas::before {
     content: '\f00d';
 }
 
 ul {
     position: absolute;
-    top: 50px;
-    background: #323232;
+    margin-top: 62px;
+    background: #f7f7f7;
     list-style: none;
-    width: 120px;
-    margin-left: 62px;
+    width: 96%;
     text-align: center;
     padding-left: 0;
     border-radius: 5px;
@@ -73,7 +92,7 @@ ul {
     transition: transform 01s ease-in, opacity 0.2s ease;
 }
 
-.menu-container.active ul {
+.menu-container.active ul, .menu-containerr.active ul {
     transform: translateY(0);
     opacity: 1;
 }
@@ -83,9 +102,9 @@ ul::before {
     content: '';
     width: 20px;
     height: 20px;
-    background: #323232;
+    background: #f7f7f7;
     top: -10px;
-    left: 15px;
+    right: 20px;
     transform: rotate(45deg);
     z-index: -1;
 }
@@ -95,7 +114,7 @@ ul li {
     padding:  5px 10px;
     cursor: pointer;
     border: 1px solid transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 20%);
     font-family: font1;
 }
 
@@ -116,7 +135,7 @@ ul li:hover {
 }
 
 ul li a {
-    color: #ffffff;
+    color: #007eff;
     font-size: 16px;
     font-family: font1;
     display: block;
@@ -235,4 +254,49 @@ a {
     font-size: 10px;
     color: #bfc5cb;
     margin: 15px;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    flex-direction: column;
+}
+
+.first-img {
+    width: -webkit-fill-available;
+    border-radius: 10px;
+}
+
+.first-span {
+    font-family: 'font1';
+    font-size: 20px;
+    color: #0095ff;
+}
+
+.bio {
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    margin: 8px;
+    padding: 8px;
+    direction: rtl;
+}
+
+.bio-span {
+    font-family: 'font1';
+    color: #007eff;
+}
+
+.down {
+    border: 0;
+    background-color: #f7f7f7;
+    position: fixed;
+    bottom: 6px;
+    left: 6px;
+    border-radius: 30px;
+}
+
+.down-img {
+    width: 40px;
+    height: 45px;
 }
