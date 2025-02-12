@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroPneumation</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        @font-face {
+        font-family: font1;
+        src: url("font1.woff2") format("woff2");
+        }
+        body {
+            margin: 0;
+        }
+    </style>
+    <div style="background: #dddddd;
+    height: 45px;
+    border-bottom: 0.01rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui">
+        <span style="color: #eb0000;">L</span>
+        <span style="color: #0016c1;">i</span>
+        <span style="color: #008f00;">k</span>
+        <span style="color: #00a8bb;">r</span>
+        <span style="color: #a3a300;">o</span>
+        <input style="width: 70%;
+        height: 40%;
+        border-radius: 10px;
+        background: #f5f5f5;
+        margin: 8px;
+        border: 1px solid;
+        padding: 4px;" id="search">
+        <button type="submit" class="btn" id="search_button" style="font-family: font1;
+        font-size: 12px;
+        width: 50px;">
+            جستجو
+        </button>
+    </div>
+    <header>
+        <span class="logo-name">هیدرو پنیوماسیون</span>
+        <div class="menu-container">
+            <button class="button">
+                <a href="static/gostore.html" style="display: block; height: 100%;">
+                    <svg style="fill: rgb(0, 140, 255);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0L109.6 0C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9c0 0 0 0-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3L448 384l-320 0 0-133.4c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3L64 384l0 64c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-64 0-131.4c-4 1-8 1.8-12.3 2.3z"/></svg>
+                </a>
+            </button>
+        </div>
+    </header>
+    <div class="where"><span class="where-span">خانه</span></div>
+    <div class="first">
+        <img class="first-img" src="static/img/img1.png">
+        <div style="margin-top: -16px;">
+            <span class="first-span">HydroPneumation</span>
+        </div>
+    </div>
+    <div class="bio">
+        <span class="bio-span">هیدرو پنیوماسیون چیست ؟ هیدرو پنیوماسیون سایتی که اطلاعاتی در مورد محصولات مختلف به شما میدهد.</span>
+    </div>
+        <!--div class="gostore">
+            <a href="static/store.html">
+                <span class="gostore-span">رفتن به فروشگاه</span>
+            </a>
+        </div-->
+    <div class="menu-containerr">
+        <button class="gostore"><span class="gostore-span">رفتن به فروشگاه</span></button>
+        <ul class="menu-list">
+            <li><a href="static/store.html">محصولات 1</a></li>
+            <li><a href="static/store.html">محصولات 2</a></li>
+            <li><a href="static/store.html">محصولات 3</a></li>
+        </ul>
+    </div>
+    </div>
+    <button class="down" id="scrollToTopBtn" style="display: none;"><img src="static/img/down.png" class="down-img"></button>
+    <div class="footer-start">
+        <div style="margin: 5px;">
+            <span class="footer-start-span1">021-11111111</span>
+        </div>
+        <div style="margin: 15px;">
+            <span class="footer-start-span2">021-11111111</span>
+        </div>
+        <div dir="rtl">
+            <p style="text-align: center;"><span class="footer-start-span3">تهران ، طالقانی ، ملک شعرا بهار،</span></p>
+            <p style="text-align: center;"><span class="footer-start-span4">کوچه عطارد، پلاک2، واحد12</span></p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8903.456720923004!2d51.33842706061525!3d35.69949494234497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfe05732c2e91%3A0xfcbec017befd15f4!2z2KjYsdis2ZAg2KLYstin2K_bjA!5e0!3m2!1sfa!2s!4v1737639656752!5m2!1sfa!2s" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="margin: 15px;">
+            <span class="footer-start-span5">AAAAAA@gmail.com</span>
+        </div>
+    </div>
+    <div class="footer">
+        <span class="footer-span1">تمامی حقوق این سایت برای هیدرو پنیوماسیون محفوظ میباشد .</span>
+    </div>
+    <script>
+        // ایجاد دکمه بالا برو در صفحه
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        // این فункشن بررسی می‌کند آیا صفحه به پایین سکول شده است یا نه
+        function showHideScrollButton() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+        
+        // اضافه کردن رویداد scroll به صفحه
+        window.onscroll = function() {showHideScrollButton()};
+        
+        // عملکرد دکمه بالا برو
+        scrollToTopBtn.addEventListener('click', function() {
+            document.body.scrollTop = 0; // برای Safari
+            document.documentElement.scrollTop = 0; // برای Chrome, Firefox, IE و Opera
+        });
+        const menuContainer = document.querySelector('.menu-container')
+        menuContainer.addEventListener('click', function() {
+        this.classList.toggle('active');
+        });
+
+        const menuContainerr = document.querySelector('.menu-containerr')
+        menuContainerr.addEventListener('click', function() {
+        this.classList.toggle('active');
+        });
+    </script>
+    </body>

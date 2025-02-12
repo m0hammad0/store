@@ -1,0 +1,350 @@
+@font-face {
+    font-family: font1;
+    src: url("../font/font1.woff2") format("woff2");
+}
+@font-face {
+    font-family: font2;
+    src: url("../font/font2.woff2") format("woff2");
+}
+@keyframes changeBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+header {
+    background-color: #ffffff;
+    height: 80px;
+    margin: 0px;
+    box-shadow: 0px 1px 0px 1px rgb(212 212 212);
+}
+
+.logo-name {
+    font-family: font1;
+    font-size: 20px;
+    color: #4aabff;
+    float: right;
+    margin: 25px 20px;
+}
+
+.button {
+    background-color: #ffffff;
+    margin: 22px 20px;
+    color: #4aabff;
+    font-size: 28px;
+    padding: 3px;
+    width: 40px;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    transition: width 0.4s;
+}
+
+.menu-containerr {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    /*transform: translateX(-50%);
+    overflow: hidden;
+    float: left;*/
+}
+
+.gostore {
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    padding: 10px;
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #007eff;
+    transition: width 0.4s;
+    background: linear-gradient(to right, rgb(0, 141, 197), #003bfd, rgb(18, 0, 180));
+    background-size: 400% 400%;
+    animation: changeBackground 4s infinite;
+}
+
+.gostore-span {
+    font-family: 'font1';
+    color: #f7f7f7;
+    font-size: 15px;
+}
+
+.menu-container.active, .menu-containerr.active {
+    overflow: visible;
+}
+
+.menu-container.active .button, .menu-containerr.active .button {
+    /*width: 1%;*/
+}
+
+.menu-container.active .fas::before, .menu-containerr.active .fas::before {
+    content: '\f00d';
+}
+
+ul {
+    position: absolute;
+    margin-top: 62px;
+    background: #f7f7f7;
+    list-style: none;
+    width: 96%;
+    text-align: center;
+    padding-left: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 01s ease-in, opacity 0.2s ease;
+}
+
+.menu-container.active ul, .menu-containerr.active ul {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu-containerr ul::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #f7f7f7;
+    top: -10px;
+    right: 20px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+ul li {
+    line-height: 35px;
+    padding:  5px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 20%);
+    font-family: font1;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+ul li:hover:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+ul li:hover {
+    box-shadow: inset 0 0 5px #4aabff, inset 0 0 10px #68b8ff;
+}
+
+ul li a {
+    color: #007eff;
+    font-size: 16px;
+    font-family: font1;
+    display: block;
+    width: 100%;
+}
+
+ul li:hover a {
+    color: #4aabff;
+}
+
+.where {
+    margin: 16px 8px 8px 8px;
+    box-shadow: 0px 0px 9px 1px rgb(212 212 212);
+    height: 40px;
+    background: #fafafa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.where-span {
+    color: #c3c3c3;
+    margin: 15px;
+    font-size: 16px;
+    font-family: font1;
+}
+
+.product-line {
+    margin: 0 8px;
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 0px 0;
+    gap: 10px;
+}
+
+.product {
+    background-color: #f7f7f7;
+    height: 240px;
+    /*width: 195px;*/
+    /*float: right;*/
+    box-shadow: 0 0 0 1px rgb(207 207 207);
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.product-img {
+    margin: 7px;
+    border-radius: 10px;
+}
+
+.product-span1 {
+    font-family: 'font1';
+    font-size: 20px;
+}
+
+.product-span2 {
+    font-family: 'font1';
+    font-size: 13px;
+    color: #666666;
+}
+
+a {
+    text-decoration: none;
+}
+
+.product-span3 {
+    font-family: 'font1';
+    color: #505050;
+    background: #f7f7f7;
+    border: 1px solid #606060;
+    padding: 0 6px;
+    border-radius: 15px;
+}
+
+.footer-start {
+    background-color: #e3e3e3;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-start-span1 {
+    font-family: 'font1';
+    font-size: 40px;
+}
+
+.footer-start-span2 {
+    font-family: 'font1';
+    font-size: 20px;
+    color: #878787;
+}
+
+.footer-start-span3, .footer-start-span4 {
+    font-family: 'font1';
+    font-size: 16px;
+    color: #878787;
+}
+
+.footer-start-span5 {
+    font-family: 'font1';
+    color: #878787;
+}
+
+.footer {
+    height: 50px;
+    background: #2e4150;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-span1 {
+    font-family: font1;
+    font-size: 10px;
+    color: #bfc5cb;
+    margin: 15px;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    flex-direction: column;
+}
+
+.first-img {
+    width: -webkit-fill-available;
+    border-radius: 10px;
+}
+
+.first-span {
+    font-family: 'font2';
+    font-size: 24px;
+    color: #0095ff;
+}
+
+.bio {
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    margin: 8px;
+    padding: 8px;
+    direction: rtl;
+}
+
+.bio-span {
+    font-family: 'font1';
+    color: #007eff;
+}
+
+.down {
+    border: 0;
+    background-color: #f7f7f7;
+    position: fixed;
+    bottom: 6px;
+    left: 6px;
+    border-radius: 30px;
+}
+
+.down-img {
+    width: 40px;
+    height: 45px;
+}
+
+.gotostore {
+    /*background: #0087b129;*/
+    background: linear-gradient(to right, #00b7ff4f, #0044ff4f);
+    background-size: 400% 400%;
+    animation: changeBackground 1.5s infinite;
+    border-right: 4px solid #0072ff;
+    margin: 14px;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+.gotostore-span1 {
+    font-family: font1;
+    direction: rtl;
+    margin: 5px 15px;
+    color: #005773;
+}
+
+.gotostore-1 {
+    height: 40px;
+    background: #ffffffd4;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.gotostore-1-span {
+    color: #353535;
+    font-family: font1;
+    margin: 0 10px;
+}
